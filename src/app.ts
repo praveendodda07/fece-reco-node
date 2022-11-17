@@ -96,7 +96,7 @@ async function registerFace(faceUser: string) {
   return labeledFaceDescriptors;
 }
 
-app.post("/upload", upload.single("face"), async function (req, res) {
+app.post("/fece-match", upload.single("face"), async function (req, res) {
   const file_buffer = req?.file?.["buffer"];
 
   if (!file_buffer) return res.sendStatus(404);
